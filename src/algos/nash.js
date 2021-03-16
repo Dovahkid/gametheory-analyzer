@@ -1,0 +1,7 @@
+var nash = (x,y,a,b) => {
+    let aPercent = (b-y) / (x-y+b-a);
+    let bPercent = 1 - aPercent;
+    let expectedPay = (x * aPercent) + y + (y * -aPercent);
+	console.log(`Other player should pick A ${aPercent*100}% of the time and B ${bPercent*100}%`)
+    console.log(`Expected Payoff: ${expectedPay}`)
+}
